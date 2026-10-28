@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فراهوش | Farahoosh</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap');
+:root{--bg:#080d20;--panel:#101a35;--panel2:#152344;--line:#2a3c69;--blue:#8cc9ff;--purple:#c5a3ff;--muted:#a9b8d8;--white:#f7f9ff;--green:#80e5c1;--danger:#ff9cae}
+*{box-sizing:border-box} body{margin:0;min-height:100vh;color:var(--white);font-family:'Vazirmatn',Tahoma,sans-serif;background:radial-gradient(ellipse at 15% 10%,#26366a 0,transparent 32%),radial-gradient(ellipse at 85% 30%,#39245d 0,transparent 28%),radial-gradient(ellipse at 50% 100%,#102c4c 0,transparent 38%),var(--bg);background-attachment:fixed}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.38;background-image:radial-gradient(1px 1px at 8% 15%,white 99%,transparent),radial-gradient(2px 2px at 23% 62%,#b9d9ff 99%,transparent),radial-gradient(1px 1px at 70% 17%,white 99%,transparent),radial-gradient(1px 1px at 83% 72%,white 99%,transparent),radial-gradient(2px 2px at 56% 44%,#d3baff 99%,transparent),radial-gradient(1px 1px at 94% 29%,white 99%,transparent),radial-gradient(1px 1px at 38% 30%,white 99%,transparent);background-size:300px 250px}
+button,input,textarea,select{font:inherit}button{cursor:pointer;border:0}.hidden{display:none!important}.wrap{width:min(1100px,92%);margin:auto;position:relative}.brand{text-align:center;padding:28px 0 18px}.brand-fa{font-size:clamp(2.5rem,7vw,4.5rem);font-weight:800;letter-spacing:-2px;color:#d6eaff;text-shadow:0 0 30px #659eff55}.brand-en{font-family:'Caveat',cursive;font-size:clamp(1.9rem,5vw,3rem);color:var(--purple);line-height:1.1}.tagline{color:var(--muted);font-size:.92rem;margin-top:10px}.card{background:linear-gradient(145deg,#111c38eF,#10162deF);border:1px solid #34467599;border-radius:22px;padding:22px;box-shadow:0 18px 55px #0003;backdrop-filter:blur(8px)}.hero{padding:22px 0 50px}.hero h1{text-align:center;font-size:clamp(1.35rem,4vw,2rem);margin:8px 0;color:#fff}.hero p{text-align:center;color:var(--muted);margin:0 0 26px}.choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:760px;margin:auto}.choice{min-height:190px;text-align:center;color:white;background:linear-gradient(135deg,#18294b,#171d3c);border:1px solid #516da8;border-radius:20px;padding:24px 18px;transition:.2s}.choice:hover{transform:translateY(-3px);border-color:var(--blue);box-shadow:0 12px 35px #5c8fff25}.choice .ico{font-size:2.5rem;display:block;margin-bottom:10px}.choice strong{display:block;font-size:1.2rem}.choice small{display:block;color:var(--muted);margin-top:8px}.form-card{max-width:520px;margin:20px auto}.form-card h2,.section-head h2{margin:0 0 8px}.muted{color:var(--muted)}.field{display:grid;gap:7px;margin:15px 0}.field label{font-size:.9rem;color:#d6e1fb}.field input,.field textarea,.field select{width:100%;background:#091127;color:white;border:1px solid #34466e;border-radius:12px;padding:12px 13px;outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--blue);box-shadow:0 0 0 3px #8cc9ff18}.btn{border-radius:12px;padding:11px 16px;font-weight:700;transition:.15s}.btn-primary{background:linear-gradient(100deg,#619cf3,#9d83f5);color:#071128}.btn-secondary{background:#1a2a4d;border:1px solid #405783;color:#e9f2ff}.btn-danger{background:#492333;border:1px solid #87485e;color:#ffdce4}.btn:active{transform:scale(.98)}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.notice{padding:12px 14px;border-radius:12px;background:#182c49;border:1px solid #38557f;color:#cde4ff;font-size:.87rem;margin:14px 0}.error{color:#ffb8c4;font-size:.9rem;margin-top:10px}.success{color:#a9f4d6;font-size:.9rem;margin-top:10px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0 20px}.topbar .mini-brand{font-size:1.45rem;font-weight:800;color:#cfe6ff}.user-pill{font-size:.85rem;color:#dbe7ff;border:1px solid #40547d;border-radius:999px;padding:7px 12px;background:#111b35}.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.section-head p{color:var(--muted);margin:4px 0 0;font-size:.9rem}.content{padding-bottom:105px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.item{background:#101a35;border:1px solid #2e426e;border-radius:16px;padding:16px;min-width:0}.item h3{margin:0 0 8px;font-size:1.05rem;overflow-wrap:anywhere}.item p{color:var(--muted);font-size:.9rem;white-space:pre-wrap;overflow-wrap:anywhere}.item .meta{font-size:.78rem;color:#8fa6d1;margin:8px 0}.empty{padding:28px 15px;text-align:center;border:1px dashed #42557f;border-radius:16px;color:var(--muted)}.bottom-nav{position:fixed;z-index:5;bottom:10px;left:50%;transform:translateX(-50%);width:min(700px,94%);display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:8px;background:#0b1226ee;border:1px solid #34466e;border-radius:18px;backdrop-filter:blur(14px);box-shadow:0 12px 40px #0007}.nav-btn{color:#9eb0d4;background:transparent;border-radius:12px;padding:9px 4px;display:grid;justify-items:center;gap:4px;font-size:.8rem}.nav-btn span:first-child{font-size:1.25rem}.nav-btn.active{background:#1b2c50;color:#c5dfff;box-shadow:inset 0 0 0 1px #4969a6}.subnav{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.subnav button{background:#172746;color:#c8d7f5;border:1px solid #354a74;border-radius:10px;padding:9px 12px}.subnav button.active{background:#2b3868;color:#fff;border-color:#8f8de8}.file-preview{font-size:.82rem;color:#9eb6de;overflow-wrap:anywhere}.statline{display:flex;gap:10px;flex-wrap:wrap}.stat{background:#132241;border:1px solid #2f436b;padding:10px 14px;border-radius:12px;color:#c9d9f7;font-size:.9rem}.student-login-hint{font-size:.8rem;color:#9aadd3;margin-top:8px}
+.subject-picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:8px;margin:12px 0}
+.subject-pick{display:flex;align-items:center;gap:8px;background:#0b142b;border:1px solid #34466e;border-radius:10px;padding:9px}
+.subject-ranges{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}
+.subject-range{background:#0b142b;border:1px solid #34466e;border-radius:10px;padding:10px}
+.report-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:14px;margin-top:14px}
+.report-table-wrap{overflow:auto}
+.report-table{border-collapse:collapse;width:100%;min-width:700px;font-size:.82rem}
+.report-table th,.report-table td{border:1px solid #355080;padding:8px;text-align:center}
+.report-table th{background:#172b50;color:#d8e8ff}
+.report-table tr:last-child{font-weight:800;background:#173b70}
+.report-chart{background:#0b142b;border:1px solid #34466e;border-radius:14px;padding:12px;margin:12px 0}
+.bar-chart{display:flex;align-items:flex-end;gap:8px;min-height:180px;overflow-x:auto;padding:12px 4px 4px;border-bottom:1px solid #49638d}
+.bar-item{min-width:38px;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:5px;height:170px}
+.bar-fill{width:min(28px,80%);min-height:2px;background:linear-gradient(#57dcff,#6d7cff);border-radius:7px 7px 0 0}
+.bar-label{font-size:.7rem;white-space:nowrap;transform:rotate(-30deg);transform-origin:top center;margin-top:9px}
+.line-chart{width:100%;height:210px;display:block}
+.report-overall{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.exam-results-table{border-collapse:collapse;width:100%;min-width:600px;font-size:.84rem}
+.exam-results-table th,.exam-results-table td{border:1px solid #355080;padding:8px;text-align:center}
+.exam-results-table th{background:#172b50;color:#d8e8ff}
+.exam-results-table tr.current-student{outline:2px solid #41d8ff;background:#102e55}
+.exam-results-scroll{overflow:auto}
+.score-note{font-size:.82rem;color:#a9bbdc;line-height:1.7}
+@media(max-width:760px){.report-layout{grid-template-columns:1fr}.report-table{font-size:.75rem}.report-table th,.report-table td{padding:6px}}
+@media(max-width:620px){.choice-grid,.grid{grid-template-columns:1fr}.choice{min-height:150px}.card{padding:17px}.topbar{align-items:flex-start}.section-head{align-items:flex-start;flex-direction:column}.section-head .btn{width:100%}.brand{padding-top:20px}.bottom-nav{bottom:6px}.content{padding-bottom:100px}}
+
+.answer-tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.answer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.answer-row{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#0b142b;border:1px solid #2b3d65;border-radius:10px;padding:7px 9px;min-width:0}
+.answer-num{font-weight:800;min-width:34px;color:#d9e8ff}
+.bubbles{display:flex;gap:5px;direction:ltr}
+.bubble{width:29px;height:29px;border:1px solid #7890bb;border-radius:50%;background:transparent;color:#dce9ff;padding:0;font-size:.76rem;display:grid;place-items:center}
+.bubble.selected{background:#05070c;color:#05070c;border:2px solid #05070c;box-shadow:inset 0 0 0 2px #dce9ff}
+.bubble.student-selected{background:#8cc9ff;color:#071128;border-color:#8cc9ff;font-weight:800}
+.answer-sheet-head{text-align:center;background:#111d39;border:1px solid #334a78;border-radius:14px;padding:14px;margin:12px 0}
+.answer-sheet-head h3{margin:0 0 6px}
+.qr-wrap{display:grid;justify-items:center;gap:8px;margin-top:15px;padding:14px;border:1px dashed #435c8d;border-radius:14px}
+.qr-wrap img{width:180px;height:180px;background:#fff;padding:6px;border-radius:8px}
+.weight-range{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:8px;align-items:end}
+.weight-range input,.weight-range select{width:100%;background:#091127;color:white;border:1px solid #34466e;border-radius:10px;padding:10px}
+@media(max-width:620px){.answer-grid{grid-template-columns:1fr}.answer-tools{grid-template-columns:1fr}.weight-range{grid-template-columns:1fr 1fr}.weight-range button{grid-column:1/-1}}
+@media print{body{background:white!important;color:#111!important}.no-print,.bottom-nav,.brand,.topbar{display:none!important}.card,.item,.answer-row,.answer-sheet-head{background:white!important;color:#111!important;box-shadow:none!important;border-color:#aaa!important}.muted,.meta{color:#444!important}.answer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.bubble{border-color:#222!important;color:#222!important}.bubble.selected{background:#000!important;color:#000!important;box-shadow:none!important}}
+
+
+/* Clear, left-to-right answer sheet numbering */
+.answer-grid{direction:ltr;grid-template-columns:repeat(2,minmax(0,1fr))}
+.answer-row{direction:ltr;justify-content:flex-start;gap:10px;min-height:42px}
+.answer-num{direction:ltr;unicode-bidi:isolate;display:inline-flex;align-items:center;justify-content:center;flex:0 0 42px;width:42px;min-width:42px;font-size:1rem;line-height:1.2;text-align:center;font-variant-numeric:tabular-nums;color:#fff}
+.bubbles{direction:ltr;flex:0 0 auto;gap:6px}
+.answer-row .meta{margin-left:auto;white-space:nowrap;font-size:.72rem}
+@media(max-width:620px){.answer-grid{grid-template-columns:1fr}.answer-num{flex-basis:44px;width:44px;min-width:44px}}
+
+
+/* Student exam workspace: portrait puts answer sheet first; landscape puts it on the left. */
+.exam-workspace{display:flex;flex-direction:column;gap:14px;align-items:stretch}
+.exam-source,.exam-answer{min-width:0;border:1px solid #34466e;border-radius:14px;padding:12px;background:rgba(8,18,43,.72)}
+.exam-source h3,.exam-answer h3{margin:0 0 10px}
+.exam-file-scroll{width:100%;max-height:70vh;overflow:auto;overscroll-behavior:contain;background:#fff;border-radius:10px;text-align:center}
+.exam-file-scroll img{display:block;max-width:100%;height:auto;margin:0 auto}
+.exam-file-scroll iframe,.exam-file-scroll object{display:block;width:100%;height:70vh;min-height:420px;border:0;background:#fff}
+.exam-answer .answer-grid{max-height:72vh;overflow:auto;padding:2px}
+@media (orientation:landscape) and (min-width:600px){
+ .exam-workspace{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
+ .exam-answer{grid-column:1;grid-row:1}
+ .exam-source{grid-column:2;grid-row:1}
+ .exam-file-scroll{max-height:78vh}
+ .exam-file-scroll iframe,.exam-file-scroll object{height:78vh}
+ .exam-answer .answer-grid{max-height:70vh}
+}
+@media (orientation:portrait){
+ .exam-workspace{display:flex;flex-direction:column}
+ .exam-answer{order:1}
+ .exam-source{order:2}
+}
+
+
+.pdf-scroll-pages{background:#e8edf7;border-radius:10px;padding:8px;display:flex;flex-direction:column;gap:10px;max-height:78vh;overflow:auto}
+.pdf-page-canvas{display:block;max-width:100%;height:auto!important;margin:0 auto;background:white;box-shadow:0 2px 8px #0002}
+.pdf-status{padding:10px;text-align:center;color:#24385e;font-size:.9rem}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="brand">
+    <div class="brand-fa">فراهوش</div>
+    <div class="brand-en">Farahoosh</div>
+    <div class="tagline">مسیر تو به سوی دانش و پیشرفت</div>
+  </header>
+
+  <main id="landing" class="hero">
+    <h1>به فراهوش خوش آمدید</h1>
+    <p>برای ادامه، نوع ورود خود را انتخاب کنید.</p>
+    <div class="choice-grid">
+      <button class="choice" onclick="showLogin('manager')"><span class="ico">✦</span><strong>ورود به عنوان مدیر</strong><small>مدیریت فرا آموزان، آموزش‌ها و آزمون‌ها</small></button>
+      <button class="choice" onclick="showLogin('student')"><span class="ico">⌑</span><strong>ورود به عنوان دانش‌آموز</strong><small>مشاهدهٔ آموزش‌ها و آزمون‌های اختصاصی</small></button>
+    </div>
+  </main>
+
+  <section id="managerLogin" class="card form-card hidden">
+    <h2>ورود مدیر</h2><p class="muted">اطلاعات حساب مدیر را وارد کنید.</p>
+    <div class="field"><label for="managerUsername">نام کاربری</label><input id="managerUsername" autocomplete="username" placeholder="نام کاربری مدیر"></div>
+    <div class="field"><label for="managerPassword">رمز عبور</label><input id="managerPassword" type="password" autocomplete="current-password" placeholder="رمز عبور مدیر"></div>
+    <div class="actions"><button class="btn btn-primary" onclick="loginManager()">ورود به حساب مدیر</button><button class="btn btn-secondary" onclick="goHome()">بازگشت</button></div>
+    <div id="managerError" class="error"></div>
+  </section>
+
+  <section id="studentLogin" class="card form-card hidden">
+    <h2>ورود دانش‌آموز</h2><p class="muted">رمز عبوری را وارد کنید که مدیر در اختیارتان گذاشته است.</p>
+    <div class="field"><label for="studentPassword">رمز عبور</label><input id="studentPassword" type="password" autocomplete="current-password" placeholder="رمز عبور اختصاصی"></div>
+    <div class="student-login-hint">نام کاربری پس از شناسایی حساب، به‌صورت خودکار نمایش داده می‌شود.</div>
+    <div class="actions"><button class="btn btn-primary" onclick="loginStudent()">ورود به حساب دانش‌آموز</button><button class="btn btn-secondary" onclick="goHome()">بازگشت</button></div>
+    <div id="studentError" class="error"></div>
+  </section>
+
+  <section id="app" class="hidden content">
+    <div class="topbar">
+      <div class="mini-brand">فراهوش <span style="font:600 1.1rem Caveat,cursive;color:var(--purple)">Farahoosh</span></div>
+      <div class="user-pill" id="currentUser"></div>
+    </div>
+    <div id="managerView" class="hidden">
+      <section id="managerStudents" class="manager-section">
+        <div class="section-head"><div><h2>فرا آموزان</h2><p>ساخت و مدیریت حساب‌های دانش‌آموزی</p></div><button class="btn btn-primary" onclick="togglePanel('addStudentPanel')">＋ افزودن فرا آموز</button></div>
+        <div id="addStudentPanel" class="card hidden">
+          <h3>ساخت حساب دانش‌آموز</h3>
+          <div class="field"><label for="newStudentName">نام کاربری دانش‌آموز</label><input id="newStudentName" placeholder="مثلاً دانش‌آموز ۱"></div>
+          <div class="field"><label for="newStudentPassword">رمز عبور اختصاصی</label><input id="newStudentPassword" placeholder="یک رمز عبور بسازید"></div>
+          <div class="actions"><button class="btn btn-primary" onclick="addStudent()">ساخت حساب</button><button class="btn btn-secondary" onclick="togglePanel('addStudentPanel',false)">انصراف</button></div>
+          <div id="studentCreateMessage"></div>
+        </div>
+        <div id="studentsList" class="grid"></div>
+      </section>
+      <section id="managerLessons" class="manager-section hidden">
+        <div class="section-head"><div><h2>فراموزش</h2><p>ثبت آموزش با فایل عکس، ویدیو یا PDF</p></div><button class="btn btn-primary" onclick="togglePanel('addLessonPanel')">＋ اضافه کردن آموزش</button></div>
+        <div id="addLessonPanel" class="card hidden">
+          <h3>اضافه کردن آموزش</h3>
+          <div class="field"><label for="lessonTitle">نام آموزش</label><input id="lessonTitle" placeholder="عنوان آموزش"></div>
+          <div class="field"><label for="lessonDescription">توضیحات (اختیاری)</label><textarea id="lessonDescription" rows="3" placeholder="توضیح کوتاه دربارهٔ آموزش"></textarea></div>
+          <div class="field"><label for="lessonFiles">انتخاب فایل‌ها (عکس، ویدیو یا PDF)</label><input id="lessonFiles" type="file" accept="image/*,video/*,application/pdf" multiple><div class="file-preview">در نسخهٔ محلی، فایل‌ها در مرورگر همین دستگاه نگهداری می‌شوند؛ حجم زیاد ممکن است محدودیت ایجاد کند.</div></div>
+          <div class="actions"><button class="btn btn-primary" onclick="addLesson()">ثبت آموزش</button><button class="btn btn-secondary" onclick="togglePanel('addLessonPanel',false)">انصراف</button></div>
+          <div id="lessonCreateMessage"></div>
+        </div>
+        <div id="lessonsList" class="grid"></div>
+      </section>
+      <section id="managerTests" class="manager-section hidden">
+        <div class="section-head"><div><h2>آزمون‌ها</h2><p>ساخت و مدیریت آزمون‌ها</p></div><button class="btn btn-primary" onclick="togglePanel('addTestPanel')">＋ ساخت آزمون جدید</button></div>
+        <div id="addTestPanel" class="card hidden">
+          <h3>ساخت آزمون جدید</h3>
+          <p class="muted">ابتدا روش ساخت آزمون را انتخاب کنید.</p>
+          <div id="testModeChoices" class="choice-grid" style="max-width:none">
+            <button class="choice" style="min-height:145px" onclick="chooseTestMode('file')"><span class="ico">▧</span><strong>ساخت آزمون آنلاین با فایل یا تصویر</strong><small>افزودن فایل یا تصویر آزمون</small></button>
+            <button class="choice" style="min-height:145px" onclick="chooseTestMode('manual')"><span class="ico">☷</span><strong>ساخت آزمون آنلاین بدون پاسخنامه</strong><small>نوشتن سؤال‌ها و چهار گزینه برای هر سؤال</small></button>
+          </div>
+          <div id="fileTestWizard" class="hidden">
+            <div class="notice">مرحلهٔ ۱ از ۳ — مشخصات آزمون</div>
+            <div class="field"><label for="fileTestTitle">نام آزمون</label><input id="fileTestTitle" placeholder="مثلاً آزمون فصل اول علوم"></div>
+            <div class="field"><label for="fileTestDescription">توضیحات (اختیاری)</label><textarea id="fileTestDescription" rows="2" placeholder="پایه، درس یا توضیحات آزمون"></textarea></div>
+            <div class="field"><label for="fileTestStartAt">تاریخ و ساعت شروع آزمون</label><input id="fileTestStartAt" type="datetime-local" required><small class="muted">ورود دانش‌آموز فقط در بازهٔ زمانی آزمون مجاز است.</small></div>
+<div class="field"><label for="fileTestDuration">مدت آزمون به دقیقه</label><input id="fileTestDuration" type="number" min="1" placeholder="مثلاً ۲۰" required></div>
+            <div class="field"><label for="fileTestQuestionCount">تعداد سؤال‌های آزمون</label><input id="fileTestQuestionCount" type="number" min="1" max="500" value="30"><small class="muted">پاسخنامهٔ مدیر و دانش‌آموز دقیقاً به همین تعداد ساخته می‌شود.</small></div>
+            <div class="field"><label>درس‌های تشکیل‌دهندهٔ آزمون</label><div id="fileSubjectPicks" class="subject-picks"></div><div class="file-preview">درس‌ها را انتخاب کن؛ بعد از آن محدودهٔ شمارهٔ سؤال‌های هر درس را مشخص کن تا کارنامه دقیق باشد.</div></div>
+            <div id="fileSubjectRanges" class="subject-ranges"></div>
+            <div class="actions"><button class="btn btn-primary" onclick="fileTestNext()">مرحله بعد</button><button class="btn btn-secondary" onclick="backToTestModes()">بازگشت</button></div>
+            <div id="fileTestMessage"></div>
+          </div>
+          <div id="fileTestUploadWizard" class="hidden">
+            <div class="notice">مرحلهٔ ۲ از ۳ — بارگذاری فایل یا تصویر آزمون</div>
+            <div class="field"><label for="fileTestFiles">انتخاب فایل‌ها</label><input id="fileTestFiles" type="file" accept="image/*,application/pdf" multiple><div class="file-preview">می‌توانید تصویر یا PDF آزمون را انتخاب کنید. در این نسخه هر فایل حداکثر ۲ مگابایت باشد.</div></div>
+            <div class="actions"><button class="btn btn-primary" onclick="goToAnswerKey()">مرحله بعد: ساخت پاسخنامه</button><button class="btn btn-secondary" onclick="showFileTestStep(1)">مرحله قبل</button></div>
+            <div id="fileTestUploadMessage"></div>
+          </div>
+          <div id="answerKeyWizard" class="hidden">
+            <div class="notice">مرحلهٔ ۳ از ۳ — ساخت پاسخنامهٔ ۳۰۰ سؤالی</div>
+            <p class="muted">پاسخ درست هر سؤال را با لمس گزینه انتخاب کنید؛ همهٔ گزینه‌ها در شروع خالی‌اند. محدودهٔ هر درس در مرحلهٔ قبل مشخص می‌شود.</p>
+            <div class="card" style="padding:14px;margin:12px 0">
+              <h3>تعیین ضریب بازهٔ سؤال‌ها</h3>
+              <div class="weight-range">
+                <div class="field"><label for="weightFrom">از شماره</label><input id="weightFrom" type="number" min="1" max="500" value="1"></div>
+                <div class="field"><label for="weightTo">تا شماره</label><input id="weightTo" type="number" min="1" max="500" value="10"></div>
+                <div class="field"><label for="weightValue">ضریب</label><select id="weightValue"><option value="1">ضریب ۱</option><option value="2">ضریب ۲</option><option value="3">ضریب ۳</option></select></div>
+                <button class="btn btn-secondary" onclick="applyWeightRange()">اعمال ضریب</button>
+              </div>
+              <div id="weightMessage" class="muted"></div>
+            </div>
+            <div class="answer-sheet-head">
+              <h3 id="keySheetTitle">پاسخنامهٔ آزمون</h3>
+              <div>نسخهٔ مدیر · ۳۰۰ سؤال · چهار گزینه</div>
+              <div class="muted">برای هر سؤال فقط یک گزینه را انتخاب کنید.</div>
+            </div>
+            <div class="actions no-print"><button class="btn btn-secondary" onclick="window.print()">چاپ / ذخیره PDF پاسخنامه</button><button class="btn btn-secondary" onclick="showFileTestStep(2)">مرحله قبل</button></div>
+            <div id="managerAnswerSheet" class="answer-grid"></div>
+            <div class="actions"><button class="btn btn-primary" onclick="saveFileTest()">ثبت پاسخنامه و ذخیره آزمون</button><button class="btn btn-secondary" onclick="showFileTestStep(2)">مرحله قبل</button></div>
+            <div id="answerKeyMessage"></div>
+          </div>
+          <div id="manualTestWizard" class="hidden">
+            <div id="manualStepNotice" class="notice">مرحلهٔ ۱ — نام آزمون</div>
+            <div id="manualNameStep">
+              <div class="field"><label for="manualTestTitle">نام آزمون</label><input id="manualTestTitle" placeholder="نام آزمون را وارد کنید"></div>
+              <div class="field"><label for="manualTestDescription">توضیحات (اختیاری)</label><textarea id="manualTestDescription" rows="2" placeholder="مثلاً ریاضی هشتم، فصل اول"></textarea></div>
+              <div class="field"><label for="manualTestDuration">مدت آزمون به دقیقه (اختیاری)</label><input id="manualTestDuration" type="number" min="1" placeholder="مثلاً ۳۰"></div>
+              <div class="actions"><button class="btn btn-primary" onclick="startManualQuestions()">مرحله بعد</button><button class="btn btn-secondary" onclick="backToTestModes()">بازگشت</button></div>
+            </div>
+            <div id="manualQuestionStep" class="hidden">
+              <div class="field"><label id="manualQuestionLabel" for="manualQuestionText">سؤال اول</label><textarea id="manualQuestionText" rows="3" placeholder="متن سؤال را بنویسید"></textarea></div>
+              <div class="field"><label for="manualOption1">گزینهٔ ۱</label><input id="manualOption1" placeholder="متن گزینهٔ اول"></div>
+              <div class="field"><label for="manualOption2">گزینهٔ ۲</label><input id="manualOption2" placeholder="متن گزینهٔ دوم"></div>
+              <div class="field"><label for="manualOption3">گزینهٔ ۳</label><input id="manualOption3" placeholder="متن گزینهٔ سوم"></div>
+              <div class="field"><label for="manualOption4">گزینهٔ ۴</label><input id="manualOption4" placeholder="متن گزینهٔ چهارم"></div>
+              <div class="actions"><button class="btn btn-secondary" onclick="addManualQuestion()">＋ افزودن سؤال</button><button class="btn btn-primary" onclick="saveManualTest()">ذخیرهٔ آزمون</button></div>
+              <div id="manualQuestionMessage"></div>
+              <h3 style="margin-top:22px">فهرست سؤال‌ها</h3>
+              <div id="manualQuestionsList"></div>
+              <div class="actions"><button class="btn btn-secondary" onclick="backToManualName()">مرحله قبل</button><button class="btn btn-primary" onclick="saveManualTest()">پایان و ذخیرهٔ آزمون</button></div>
+            </div>
+          </div>
+          <div class="actions"><button class="btn btn-secondary" onclick="togglePanel('addTestPanel',false)">بستن</button></div>
+        </div>
+        <h3 style="margin-top:24px">فهرست آزمون‌ها</h3>
+        <div id="managerTestsList" class="grid"></div>
+      </section>
+    </div>
+
+    <div id="studentView" class="hidden">
+      <section id="studentHome" class="student-section">
+        <div class="card"><h2 id="studentWelcome">خوش آمدی</h2><p class="muted">از بخش‌های پایین صفحه، آموزش‌ها و آزمون‌های در دسترس را ببین.</p></div>
+        <div class="statline" style="margin-top:14px"><div class="stat" id="studentLessonCount">آموزش‌ها: ۰</div><div class="stat" id="studentTestCount">آزمون‌ها: ۰</div></div>
+      </section>
+      <section id="studentLessons" class="student-section hidden"><div class="section-head"><div><h2>آموزش‌ها</h2><p>محتوای آموزشی منتشرشده توسط مدیر</p></div></div><div id="studentLessonsList" class="grid"></div></section>
+      <section id="studentTests" class="student-section hidden"><div class="section-head"><div><h2>آزمون‌ها</h2><p>فهرست آزمون‌های در دسترس</p></div></div><div id="studentTestsList" class="grid"></div><div id="studentAttemptPanel" class="card hidden" style="margin-top:18px"></div><div id="studentReportPanel" class="card hidden" style="margin-top:18px"></div></section>
+    </div>
+  </section>
+</div>
+
+<nav id="managerNav" class="bottom-nav hidden">
+  <button class="nav-btn active" data-section="managerStudents" onclick="managerTab('managerStudents',this)"><span>♙</span><span>فرا آموزان</span></button>
+  <button class="nav-btn" data-section="managerLessons" onclick="managerTab('managerLessons',this)"><span>▤</span><span>فراموزش</span></button>
+  <button class="nav-btn" data-section="managerTests" onclick="managerTab('managerTests',this)"><span>☷</span><span>آزمون‌ها</span></button>
+</nav>
+<nav id="studentNav" class="bottom-nav hidden">
+  <button class="nav-btn active" onclick="studentTab('studentHome',this)"><span>⌂</span><span>خانه</span></button>
+  <button class="nav-btn" onclick="studentTab('studentLessons',this)"><span>▤</span><span>آموزش‌ها</span></button>
+  <button class="nav-btn" onclick="studentTab('studentTests',this)"><span>☷</span><span>آزمون‌ها</span></button>
+</nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+const MANAGER_USERNAME = 'سید امیر عدنان حسینی';
+const MANAGER_PASSWORD = '09215531';
+const STORE_KEY = 'frahoosh_reset_20261027_v3';
+let db = loadDB();
+let activeStudent = null;
+
+function loadDB(){try{return JSON.parse(localStorage.getItem(STORE_KEY))||{students:[],lessons:[],tests:[]}}catch(e){return {students:[],lessons:[],tests:[]}}}
+function saveDB(){try{localStorage.setItem(STORE_KEY,JSON.stringify(db));return true}catch(e){alert('ذخیره‌سازی انجام نشد؛ ممکن است حجم فایل‌ها زیاد باشد یا مرورگر فضای کافی نداشته باشد.');return false}}
+function el(id){return document.getElementById(id)}
+function showOnly(ids){['landing','managerLogin','studentLogin','app'].forEach(id=>el(id).classList.add('hidden'));ids.forEach(id=>el(id).classList.remove('hidden'))}
+function showLogin(type){showOnly([type==='manager'?'managerLogin':'studentLogin']);el(type==='manager'?'managerError':'studentError').textContent=''}
+function goHome(){showOnly(['landing'])}
+function loginManager(){const u=el('managerUsername').value.trim(),p=el('managerPassword').value;if(u===MANAGER_USERNAME&&p===MANAGER_PASSWORD){activeStudent=null;showApp('manager')}else{el('managerError').textContent='نام کاربری یا رمز عبور مدیر درست نیست.'}}
+function loginStudent(){const p=el('studentPassword').value;const found=db.students.find(s=>s.password===p);if(!p||!found){el('studentError').textContent='حسابی با این رمز عبور پیدا نشد. رمز را بررسی کنید.';return}activeStudent=found;showApp('student')}
+function showApp(role){showOnly(['app']);el('managerView').classList.toggle('hidden',role!=='manager');el('studentView').classList.toggle('hidden',role!=='student');el('managerNav').classList.toggle('hidden',role!=='manager');el('studentNav').classList.toggle('hidden',role!=='student');el('currentUser').textContent=role==='manager'?'مدیر: '+MANAGER_USERNAME:'دانش‌آموز: '+activeStudent.username;if(role==='manager'){managerTab('managerStudents',document.querySelector('#managerNav .nav-btn'));renderAll()}else{el('studentWelcome').textContent='خوش آمدی، '+activeStudent.username;renderAll();studentTab('studentHome',document.querySelector('#studentNav .nav-btn'))}}
+function managerTab(id,btn){document.querySelectorAll('.manager-section').forEach(s=>s.classList.add('hidden'));el(id).classList.remove('hidden');document.querySelectorAll('#managerNav .nav-btn').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');}
+function studentTab(id,btn){document.querySelectorAll('.student-section').forEach(s=>s.classList.add('hidden'));el(id).classList.remove('hidden');document.querySelectorAll('#studentNav .nav-btn').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');renderAll()}
+function togglePanel(id,force){const n=el(id);if(force===false)n.classList.add('hidden');else n.classList.toggle('hidden')}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function addStudent(){const username=el('newStudentName').value.trim(),password=el('newStudentPassword').value.trim(),msg=el('studentCreateMessage');msg.className='';if(!username||!password){msg.className='error';msg.textContent='نام کاربری و رمز عبور را وارد کنید.';return}if(db.students.some(s=>s.username.toLowerCase()===username.toLowerCase())){msg.className='error';msg.textContent='این نام کاربری قبلاً ساخته شده است.';return}if(db.students.some(s=>s.password===password)){msg.className='error';msg.textContent='برای هر دانش‌آموز رمز عبور یکتا انتخاب کنید.';return}db.students.unshift({id:Date.now()+Math.random(),username,password,created:new Date().toLocaleDateString('fa-IR')});if(saveDB()){el('newStudentName').value='';el('newStudentPassword').value='';msg.className='success';msg.textContent='حساب ساخته شد. نام کاربری و رمز را در اختیار دانش‌آموز قرار دهید.';renderAll()}}
+function deleteStudent(id){if(!confirm('حساب این دانش‌آموز حذف شود؟'))return;db.students=db.students.filter(s=>String(s.id)!==String(id));saveDB();renderAll()}
+function readFile(file){return new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve({name:file.name,type:file.type,data:r.result,size:file.size});r.onerror=reject;r.readAsDataURL(file)})}
+async function addLesson(){const title=el('lessonTitle').value.trim(),desc=el('lessonDescription').value.trim(),files=[...el('lessonFiles').files],msg=el('lessonCreateMessage');msg.className='';if(!title){msg.className='error';msg.textContent='نام آموزش را وارد کنید.';return}if(files.some(f=>f.size>2*1024*1024)){msg.className='error';msg.textContent='برای پایداری نسخهٔ آزمایشی، هر فایل باید حداکثر ۲ مگابایت باشد.';return}if(files.some(f=>!(f.type.startsWith('image/')||f.type.startsWith('video/')||f.type==='application/pdf'))){msg.className='error';msg.textContent='فقط فایل عکس، ویدیو یا PDF مجاز است.';return}try{const fileData=await Promise.all(files.map(readFile));db.lessons.unshift({id:Date.now()+Math.random(),title,desc,files:fileData,created:new Date().toLocaleDateString('fa-IR')});if(saveDB()){el('lessonTitle').value='';el('lessonDescription').value='';el('lessonFiles').value='';msg.className='success';msg.textContent='آموزش ثبت شد.';renderAll()}}catch(e){msg.className='error';msg.textContent='خواندن فایل با مشکل روبه‌رو شد.'}}
+let manualQuestions = [];
+let fileTestDraft = {};
+let answerKeyDraft = Array.from({length:30},()=>({answer:0,weight:1}));
+let activeAttemptTestId = null;
+function chooseTestMode(mode){
+  if(mode==='file'&&!el('fileSubjectPicks').innerHTML)renderSubjectSetup();
+  el('testModeChoices').classList.add('hidden');
+  ['fileTestWizard','fileTestUploadWizard','answerKeyWizard','manualTestWizard'].forEach(id=>el(id).classList.add('hidden'));
+  if(mode==='file'){el('fileTestWizard').classList.remove('hidden');showFileTestStep(1)}
+  else{manualQuestions=[];renderManualQuestions();el('manualTestWizard').classList.remove('hidden');el('manualNameStep').classList.remove('hidden');el('manualQuestionStep').classList.add('hidden');el('manualStepNotice').textContent='مرحلهٔ ۱ — نام آزمون'}
+}
+function backToTestModes(){el('testModeChoices').classList.remove('hidden');['fileTestWizard','fileTestUploadWizard','answerKeyWizard','manualTestWizard'].forEach(id=>el(id).classList.add('hidden'))}
+function showFileTestStep(step){el('fileTestWizard').classList.toggle('hidden',step!==1);el('fileTestUploadWizard').classList.toggle('hidden',step!==2);el('answerKeyWizard').classList.add('hidden')}
+
+
+function getQuestionCount(){
+  const n=Number(el('fileTestQuestionCount')?.value||30);
+  return Number.isInteger(n)&&n>=1&&n<=500?n:30;
+}
+
+const FRAHOO_SH_SUBJECTS = ['ریاضی','فارسی','علوم','قرآن','عربی زبان قرآن','زبان انگلیسی','برنامه‌نویسی پایتون','پیام‌های آسمان','مطالعات اجتماعی','کار و فناوری'];
+function renderSubjectSetup(selected=[],ranges={}){
+  const picks=el('fileSubjectPicks'),rangeBox=el('fileSubjectRanges');
+  if(!picks||!rangeBox)return;
+  const chosen=selected.length?selected:['ریاضی','فارسی','علوم'];
+  picks.innerHTML=FRAHOO_SH_SUBJECTS.map(s=>`<label class="subject-pick"><input type="checkbox" value="${esc(s)}" ${chosen.includes(s)?'checked':''} onchange="updateSubjectRanges()"> ${esc(s)}</label>`).join('');
+  rangeBox.dataset.ranges=JSON.stringify(ranges||{});
+  updateSubjectRanges();
+}
+function getSelectedSubjects(){
+  return [...document.querySelectorAll('#fileSubjectPicks input:checked')].map(x=>x.value);
+}
+function updateSubjectRanges(){
+  const box=el('fileSubjectRanges');if(!box)return;
+  let old={};try{old=JSON.parse(box.dataset.ranges||'{}')}catch(e){}
+  const selected=getSelectedSubjects();
+  box.innerHTML=selected.map((s,i)=>{
+    const r=old[s]||{from:i===0?1:Math.floor(i*getQuestionCount()/selected.length)+1,to:i===selected.length-1?getQuestionCount():Math.floor((i+1)*getQuestionCount()/selected.length)};
+    return `<div class="subject-range"><strong>${esc(s)}</strong><div class="field"><label>از سؤال</label><input type="number" min="1" max="${getQuestionCount()}" data-subject="${esc(s)}" data-part="from" value="${r.from}"></div><div class="field"><label>تا سؤال</label><input type="number" min="1" max="${getQuestionCount()}" data-subject="${esc(s)}" data-part="to" value="${r.to}"></div></div>`;
+  }).join('') || '<div class="notice">حداقل یک درس انتخاب کن.</div>';
+  box.dataset.ranges=JSON.stringify(old);
+}
+function readSubjectRanges(){
+  const ranges={};
+  document.querySelectorAll('#fileSubjectRanges input[data-subject]').forEach(inp=>{
+    const s=inp.dataset.subject; ranges[s]=ranges[s]||{};
+    ranges[s][inp.dataset.part]=Number(inp.value);
+  });
+  return ranges;
+}
+function validateSubjectRanges(){
+  const subjects=getSelectedSubjects(),ranges=readSubjectRanges();
+  if(!subjects.length){alert('حداقل یک درس برای آزمون انتخاب کن.');return null}
+  for(const s of subjects){
+    const r=ranges[s];
+    if(!r||!Number.isInteger(r.from)||!Number.isInteger(r.to)||r.from<1||r.to>getQuestionCount()||r.from>r.to){alert('محدودهٔ سؤال‌های درس «'+s+'» را درست وارد کن.');return null}
+  }
+  return {subjects,ranges};
+}
+
+function fileTestNext(){
+  if(!el('fileSubjectPicks').innerHTML)renderSubjectSetup();
+  if(!validateSubjectRanges())return;
+  const title=el('fileTestTitle').value.trim();
+  if(!title){el('fileTestMessage').className='error';el('fileTestMessage').textContent='ابتدا نام آزمون را وارد کنید.';return}
+  const countInput=el('fileTestQuestionCount');
+  const chosenCount=Number(countInput?.value);
+  if(!Number.isInteger(chosenCount)||chosenCount<1||chosenCount>500){el('fileTestMessage').className='error';el('fileTestMessage').textContent='تعداد سؤال‌ها را بین ۱ تا ۵۰۰ وارد کن.';return}
+  const startAt=el('fileTestStartAt').value,duration=Number(el('fileTestDuration').value);
+  if(!startAt||!Number.isFinite(Date.parse(startAt))){el('fileTestMessage').className='error';el('fileTestMessage').textContent='تاریخ و ساعت شروع آزمون را تعیین کن.';return}
+  if(!Number.isInteger(duration)||duration<1){el('fileTestMessage').className='error';el('fileTestMessage').textContent='مدت آزمون را به دقیقه و حداقل ۱ وارد کن.';return}
+  fileTestDraft={title,desc:el('fileTestDescription').value.trim(),startAt,duration:String(duration),questionCount:chosenCount};
+  showFileTestStep(2);
+}
+function goToAnswerKey(){
+  const files=[...el('fileTestFiles').files],msg=el('fileTestUploadMessage');msg.className='';
+  if(!files.length){msg.className='error';msg.textContent='حداقل یک تصویر یا فایل PDF انتخاب کنید.';return}
+  if(files.some(f=>f.size>2*1024*1024)){msg.className='error';msg.textContent='هر فایل باید حداکثر ۲ مگابایت باشد.';return}
+  if(files.some(f=>!(f.type.startsWith('image/')||f.type==='application/pdf'))){msg.className='error';msg.textContent='فقط تصویر یا PDF مجاز است.';return}
+  answerKeyDraft=Array.from({length:Number(fileTestDraft.questionCount||getQuestionCount())},()=>({answer:0,weight:1}));
+  el('keySheetTitle').textContent='پاسخنامهٔ '+fileTestDraft.title;
+  renderAnswerSheet('managerAnswerSheet',answerKeyDraft,'key');
+  el('fileTestWizard').classList.add('hidden');el('fileTestUploadWizard').classList.add('hidden');el('answerKeyWizard').classList.remove('hidden');
+}
+function applyWeightRange(){
+  const from=Number(el('weightFrom').value),to=Number(el('weightTo').value),weight=Number(el('weightValue').value);
+  const msg=el('weightMessage');
+  if(!Number.isInteger(from)||!Number.isInteger(to)||from<1||to>answerKeyDraft.length||from>to){msg.className='error';msg.textContent='بازهٔ شمارهٔ سؤال را از ۱ تا ۳۰۰ به‌درستی وارد کنید.';return}
+  for(let i=from-1;i<to;i++)answerKeyDraft[i].weight=weight;renderAnswerSheet('managerAnswerSheet',answerKeyDraft,'key');
+  msg.className='success';msg.textContent=`ضریب ${weight} برای سؤال‌های ${from} تا ${to} ثبت شد.`;
+}
+function renderAnswerSheet(containerId,answers,mode){
+  const target=el(containerId);if(!target)return;
+  target.innerHTML=answers.map((item,i)=>`<div class="answer-row"><span class="answer-num" dir="ltr">${String(i+1).padStart(1,"0")}</span><div class="bubbles">${[1,2,3,4].map(n=>`<button type="button" class="bubble ${mode==='key'&&item.answer>0&&item.answer===n?'selected':''} ${mode==='student'&&item.answer===n?'student-selected':''}" aria-label="سؤال ${i+1} گزینه ${n}" onclick="${mode==='key'?`setKeyAnswer(${i},${n})`:`setStudentAnswer(${i},${n})`}">${n}</button>`).join('')}</div>${mode==='key'?`<span class="meta">ضریب ${item.weight||1}</span>`:''}</div>`).join('');
+}
+function setKeyAnswer(index,answer){answerKeyDraft[index].answer=answer;renderAnswerSheet('managerAnswerSheet',answerKeyDraft,'key')}
+async function saveFileTest(){
+  const msg=el('answerKeyMessage'),files=[...el('fileTestFiles').files];msg.className='';
+  if(!files.length&&!fileTestDraft.editId){msg.className='error';msg.textContent='ابتدا فایل آزمون را انتخاب کنید.';return}
+  if(files.some(f=>f.size>2*1024*1024)){msg.className='error';msg.textContent='هر فایل باید حداکثر ۲ مگابایت باشد.';return}
+  if(files.some(f=>!(f.type.startsWith('image/')||f.type==='application/pdf'))){msg.className='error';msg.textContent='فقط تصویر یا PDF مجاز است.';return}
+  try{
+    const existing=fileTestDraft.editId?db.tests.find(t=>String(t.id)===String(fileTestDraft.editId)):null;
+    const fileData=files.length?await Promise.all(files.map(readFile)):(existing?.files||[]);
+    if(!fileData.length){msg.className='error';msg.textContent='ابتدا فایل آزمون را انتخاب کنید.';return}
+    const subjectSetup=validateSubjectRanges();if(!subjectSetup)return;
+    if(answerKeyDraft.some(a=>!a.answer)){msg.className='error';msg.textContent='پاسخ درست همهٔ سؤال‌ها را در پاسخنامهٔ مدیر مشخص کن.';return}
+    const test={id:existing?existing.id:Date.now()+Math.random(),title:fileTestDraft.title,desc:fileTestDraft.desc,duration:fileTestDraft.duration,startAt:fileTestDraft.startAt,questions:'',files:fileData,mode:'file',subjects:subjectSetup.subjects,subjectRanges:subjectSetup.ranges,answerKey:answerKeyDraft.map((a,i)=>({answer:a.answer,weight:a.weight||1,subject:Object.keys(subjectSetup.ranges).find(s=>i+1>=subjectSetup.ranges[s].from&&i+1<=subjectSetup.ranges[s].to)||''})),questionCount:answerKeyDraft.length,created:existing?.created||new Date().toLocaleDateString('fa-IR')};
+    if(existing){db.tests=db.tests.map(t=>String(t.id)===String(existing.id)?test:t)}else{db.tests.unshift(test)}
+    if(saveDB()){msg.className='success';msg.textContent='پاسخنامه ثبت شد و آزمون برای دانش‌آموزان نمایش داده می‌شود.';el('fileTestTitle').value='';el('fileTestDescription').value='';el('fileTestDuration').value='';el('fileTestStartAt').value='';el('fileTestQuestionCount').value='30';el('fileTestFiles').value='';fileTestDraft={};backToTestModes();togglePanel('addTestPanel',false);renderAll()}
+  }catch(e){msg.className='error';msg.textContent='ذخیرهٔ آزمون با مشکل روبه‌رو شد. ممکن است حجم فایل‌ها برای حافظهٔ مرورگر زیاد باشد.'}
+}
+function startManualQuestions(){
+  const title=el('manualTestTitle').value.trim();
+  if(!title){alert('ابتدا نام آزمون را وارد کنید.');return}
+  el('manualNameStep').classList.add('hidden');el('manualQuestionStep').classList.remove('hidden');el('manualStepNotice').textContent='مرحلهٔ ۲ — سؤال‌ها و گزینه‌ها';el('manualQuestionLabel').textContent='سؤال '+(manualQuestions.length+1);renderManualQuestions()
+}
+function addManualQuestion(){
+  const question=el('manualQuestionText').value.trim(), options=[1,2,3,4].map(i=>el('manualOption'+i).value.trim()),msg=el('manualQuestionMessage');
+  msg.className='';
+  if(!question){msg.className='error';msg.textContent='متن سؤال را وارد کنید.';return}
+  if(options.some(o=>!o)){msg.className='error';msg.textContent='هر چهار گزینه را کامل کنید.';return}
+  manualQuestions.push({question,options});
+  el('manualQuestionText').value='';[1,2,3,4].forEach(i=>el('manualOption'+i).value='');
+  el('manualQuestionLabel').textContent='سؤال '+(manualQuestions.length+1);
+  msg.className='success';msg.textContent='سؤال اضافه شد. می‌توانید سؤال بعدی را وارد کنید.';renderManualQuestions()
+}
+function renderManualQuestions(){
+  const list=el('manualQuestionsList');if(!list)return;
+  list.innerHTML=manualQuestions.length?manualQuestions.map((q,i)=>`<article class="item" style="margin-bottom:10px"><h3>سؤال ${i+1}: ${esc(q.question)}</h3><ol>${q.options.map(o=>`<li>${esc(o)}</li>`).join('')}</ol><button class="btn btn-danger" onclick="removeManualQuestion(${i})">حذف سؤال</button></article>`).join(''):empty('هنوز سؤالی اضافه نشده است.')
+}
+function removeManualQuestion(i){manualQuestions.splice(i,1);renderManualQuestions();el('manualQuestionLabel').textContent='سؤال '+(manualQuestions.length+1)}
+function backToManualName(){el('manualQuestionStep').classList.add('hidden');el('manualNameStep').classList.remove('hidden');el('manualStepNotice').textContent='مرحلهٔ ۱ — نام آزمون'}
+function saveManualTest(){
+  const msg=el('manualQuestionMessage');msg.className='';
+  if(!manualQuestions.length){msg.className='error';msg.textContent='برای ذخیرهٔ آزمون، دست‌کم یک سؤال اضافه کنید.';return}
+  const title=el('manualTestTitle').value.trim();if(!title){msg.className='error';msg.textContent='نام آزمون وارد نشده است.';return}
+  const startAt=el('manualTestStartAt').value,duration=Number(el('manualTestDuration').value);
+  if(!startAt||!Number.isFinite(Date.parse(startAt))){msg.className='error';msg.textContent='تاریخ و ساعت شروع آزمون را تعیین کن.';return}
+  if(!Number.isInteger(duration)||duration<1){msg.className='error';msg.textContent='مدت آزمون را به دقیقه و حداقل ۱ وارد کن.';return}
+  db.tests.unshift({id:Date.now()+Math.random(),title,desc:el('manualTestDescription').value.trim(),startAt,duration:String(duration),questions:manualQuestions.map((q,i)=>`${i+1}. ${q.question}\n${q.options.map((o,j)=>`${j+1}) ${o}`).join('\n')}`).join('\n\n'),questionData:manualQuestions,mode:'manual',created:new Date().toLocaleDateString('fa-IR')});
+  if(saveDB()){msg.className='success';msg.textContent='آزمون ذخیره شد و به فهرست آزمون‌ها اضافه شد.';manualQuestions=[];['manualTestTitle','manualTestDescription','manualTestStartAt','manualTestDuration','manualQuestionText','manualOption1','manualOption2','manualOption3','manualOption4'].forEach(id=>el(id).value='');renderManualQuestions();backToTestModes();togglePanel('addTestPanel',false);renderAll()}
+}
+function deleteTest(id){if(!confirm('این آزمون حذف شود؟'))return;db.tests=db.tests.filter(t=>String(t.id)!==String(id));saveDB();renderAll()}
+function deleteLesson(id){if(!confirm('این آموزش حذف شود؟'))return;db.lessons=db.lessons.filter(x=>String(x.id)!==String(id));saveDB();renderAll()}
+function empty(msg){return '<div class="empty">'+esc(msg)+'</div>'}
+function lessonCard(x,manager){let fs=(x.files||[]).map(f=>{let url=f.data;let tag=f.type.startsWith('image/')?`<img src="${url}" alt="${esc(f.name)}" style="max-width:100%;max-height:220px;border-radius:10px;margin-top:8px">`:f.type.startsWith('video/')?`<video controls src="${url}" style="width:100%;max-height:240px;margin-top:8px;border-radius:10px"></video>`:`<a class="btn btn-secondary" style="display:inline-block;margin-top:8px;text-decoration:none" href="${url}" target="_blank" rel="noopener">باز کردن PDF: ${esc(f.name)}</a>`;return `<div class="file-preview">${esc(f.name)} · ${(f.size/1024).toFixed(0)} KB</div>${tag}`}).join('');return `<article class="item"><h3>${esc(x.title)}</h3><div class="meta">ثبت‌شده در ${esc(x.created||'')}</div>${x.desc?`<p>${esc(x.desc)}</p>`:''}${fs}${manager?`<div class="actions"><button class="btn btn-danger" onclick="deleteLesson('${x.id}')">حذف آموزش</button></div>`:''}</article>`}
+function testCard(x,manager){
+  const attached=(x.files||[]).map(f=>f.type.startsWith('image/')?`<img src="${f.data}" alt="${esc(f.name)}" style="max-width:100%;max-height:220px;border-radius:10px;margin-top:8px">`:`<a class="btn btn-secondary" style="display:inline-block;margin-top:8px;text-decoration:none" href="${f.data}" target="_blank" rel="noopener">باز کردن PDF: ${esc(f.name)}</a>`).join('');
+  const qlist=x.questionData?x.questionData.map((q,i)=>`<div style="margin:12px 0"><strong>سؤال ${i+1}: ${esc(q.question)}</strong><ol>${q.options.map(o=>`<li>${esc(o)}</li>`).join('')}</ol></div>`).join(''):'';
+  const takeButton=!manager?`<div class="actions"><button class="btn btn-primary" onclick="startTest('${x.id}')">انجام آزمون</button></div>`:'';
+  const managerTools=manager?`<div class="actions"><button class="btn btn-secondary" onclick="editTestAnswerKey('${x.id}')">مشاهده / ویرایش پاسخنامه</button><button class="btn btn-danger" onclick="deleteTest('${x.id}')">حذف آزمون</button></div>`:'';
+  return `<article class="item"><h3>${esc(x.title)}</h3><div class="meta">${esc(x.created||'')}${x.startAt?' · شروع: '+new Date(x.startAt).toLocaleString('fa-IR'):''}${x.duration?' · '+esc(x.duration)+' دقیقه':''}${x.mode==='file'?' · آزمون فایل/تصویر':x.mode==='manual'?' · آزمون بدون پاسخنامه':''}</div>${x.desc?`<p>${esc(x.desc)}</p>`:''}${x.subjects?.length?`<p class="muted">درس‌ها: ${x.subjects.map(esc).join('، ')}</p>`:''}${attached}${x.questions&&!x.questionData?`<details><summary>مشاهده سؤال‌ها</summary><p>${esc(x.questions)}</p></details>`:''}${qlist}${x.mode==='file'&&x.answerKey?`<p class="muted">پاسخنامهٔ ${x.questionCount||x.answerKey.length} سؤالی آماده است.</p>`:''}${takeButton}${managerTools}</article>`
+}
+function editTestAnswerKey(id){
+  const t=db.tests.find(x=>String(x.id)===String(id));if(!t||!t.answerKey)return;
+  fileTestDraft={title:t.title,desc:t.desc||'',duration:t.duration||'',startAt:t.startAt||'',editId:t.id};
+  const savedCount=Array.isArray(t.answerKey)?t.answerKey.length:Number(t.questionCount||30);
+  el('fileTestQuestionCount').value=savedCount;
+  answerKeyDraft=Array.from({length:savedCount},(_,i)=>({answer:t.answerKey[i]?.answer||0,weight:t.answerKey[i]?.weight||1}));
+  el('fileTestTitle').value=t.title;el('fileTestDescription').value=t.desc||'';el('fileTestDuration').value=t.duration||'';el('fileTestStartAt').value=t.startAt||'';renderSubjectSetup(t.subjects||['ریاضی','فارسی','علوم'],t.subjectRanges||{});
+  el('keySheetTitle').textContent='پاسخنامهٔ '+t.title;renderAnswerSheet('managerAnswerSheet',answerKeyDraft,'key');
+  togglePanel('addTestPanel',true);el('testModeChoices').classList.add('hidden');el('fileTestWizard').classList.add('hidden');el('fileTestUploadWizard').classList.add('hidden');el('answerKeyWizard').classList.remove('hidden');managerTab('managerTests',document.querySelector('#managerNav [data-section="managerTests"]'));
+}
+function getTestAvailability(t){
+  if(!t.startAt||!t.duration)return {allowed:false,message:'این آزمون زمان‌بندی نشده است؛ از مدیر بخواه زمان شروع و مدت را تعیین کند.'};
+  const start=Date.parse(t.startAt),end=start+Number(t.duration)*60000,now=Date.now();
+  if(!Number.isFinite(start)||!Number.isFinite(end))return {allowed:false,message:'زمان آزمون معتبر نیست.'};
+  if(now<start)return {allowed:false,message:'آزمون هنوز شروع نشده است. زمان شروع: '+new Date(start).toLocaleString('fa-IR')};
+  if(now>end)return {allowed:false,message:'مهلت این آزمون تمام شده است.'};
+  return {allowed:true,end};
+}
+function startTest(id){
+  const t=db.tests.find(x=>String(x.id)===String(id));if(!t||!activeStudent)return;
+  const availability=getTestAvailability(t);if(!availability.allowed){alert(availability.message);return}
+  activeAttemptTestId=t.id;el('studentReportPanel').classList.add('hidden');
+  const files=(t.files||[]);
+  const source=files.length?files.map((f,i)=>{
+    let viewer='';
+    if(f.type.startsWith('image/')) viewer=`<div class="exam-file-scroll"><img src="${f.data}" alt="${esc(f.name)}"></div>`;
+    else if(f.type==='application/pdf') viewer=`<div class="pdf-status" id="pdfStatus${i}">در حال آماده‌سازی صفحات PDF برای نمایش طوماری…</div><div class="pdf-scroll-pages" id="pdfPages${i}" data-pdf-index="${i}"></div>`;
+    else viewer=`<a class="btn btn-secondary" href="${f.data}" target="_blank" rel="noopener">باز کردن فایل: ${esc(f.name)}</a>`;
+    return `<div style="margin-bottom:14px"><strong>${esc(f.name)}</strong>${viewer}</div>`;
+  }).join(''):'<p class="muted">برای این آزمون فایلی بارگذاری نشده است.</p>';
+  let body='';
+  if(t.mode==='file'){
+    const questionCount=Array.isArray(t.answerKey)?t.answerKey.length:Number(t.questionCount||30);const answers=Array.from({length:questionCount},()=>({answer:0,weight:1}));
+    body=`<div class="section-head"><div><h2>${esc(t.title)}</h2><p>نام دانش‌آموز: ${esc(activeStudent.username)}</p></div></div>
+      <div class="exam-workspace">
+        <section class="exam-answer">
+          <div class="answer-sheet-head"><h3>پاسخنامهٔ دانش‌آموز</h3><div>${questionCount} سؤال · همهٔ گزینه‌ها خالی هستند</div></div>
+          <div id="studentAnswerSheet" class="answer-grid"></div>
+          <div class="actions no-print"><button class="btn btn-primary" onclick="submitFileTest()">ثبت پاسخ‌ها و مشاهدهٔ نتایج</button><button class="btn btn-secondary" onclick="closeAttempt()">بازگشت به آزمون‌ها</button><button class="btn btn-secondary" onclick="window.print()">چاپ پاسخنامه</button></div>
+          <div id="studentAttemptMessage"></div>
+          <section id="examResultsPanel" class="report-chart hidden"></section>
+        </section>
+        <section class="exam-source"><h3>فایل سؤال‌های آزمون</h3><p class="muted">فایل را در همین بخش ورق بزن و پاسخ‌ها را در پاسخنامه وارد کن.</p>${source}</section>
+      </div>`;
+    el('studentAttemptPanel').innerHTML=body;renderAnswerSheet('studentAnswerSheet',answers,'student');
+    files.forEach((f,i)=>{if(f.type==='application/pdf')renderPdfAsScroll(f,i)});
+  }else{
+    body=`<div class="section-head"><div><h2>${esc(t.title)}</h2><p>نام دانش‌آموز: ${esc(activeStudent.username)}</p></div></div>${t.questionData?t.questionData.map((q,i)=>`<div class="item" style="margin:10px 0"><strong>سؤال ${i+1}: ${esc(q.question)}</strong><div class="field">${q.options.map((o,j)=>`<label><input type="radio" name="manualAnswer${i}" value="${j+1}"> ${esc(o)}</label>`).join('<br>')}</div></div>`).join(''):`<p>فایل آزمون را مشاهده کن و پاسخ‌هایت را روی برگه بنویس.</p>${source}`}<div class="actions"><button class="btn btn-primary" onclick="submitManualTest()">ثبت انجام آزمون</button><button class="btn btn-secondary" onclick="closeAttempt()">بازگشت</button></div><div id="studentAttemptMessage"></div>`;
+    el('studentAttemptPanel').innerHTML=body;
+  }
+  el('studentAttemptPanel').classList.remove('hidden');el('studentAttemptPanel').scrollIntoView({behavior:'smooth',block:'start'});
+}
+async function renderPdfAsScroll(file,index){
+  const status=el('pdfStatus'+index),container=el('pdfPages'+index);
+  if(!container)return;
+  if(!window.pdfjsLib){if(status)status.textContent='نمایشگر PDF بارگذاری نشد. اینترنت را بررسی و آزمون را دوباره باز کن.';return}
+  try{
+    pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    const raw=atob(file.data.split(',')[1]||'');
+    const bytes=new Uint8Array(raw.length);
+    for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);
+    const pdf=await pdfjsLib.getDocument({data:bytes}).promise;
+    if(status)status.textContent=`${pdf.numPages} صفحهٔ PDF · برای دیدن ادامه، به پایین برو`;
+    for(let pageNum=1;pageNum<=pdf.numPages;pageNum++){
+      const page=await pdf.getPage(pageNum);
+      const base=page.getViewport({scale:1});
+      const maxWidth=Math.max(260,(container.clientWidth||window.innerWidth)-24);
+      const scale=Math.min(2,Math.max(.7,maxWidth/base.width));
+      const viewport=page.getViewport({scale});
+      const canvas=document.createElement('canvas');
+      canvas.className='pdf-page-canvas';
+      canvas.width=Math.ceil(viewport.width*devicePixelRatio);
+      canvas.height=Math.ceil(viewport.height*devicePixelRatio);
+      canvas.style.width=Math.ceil(viewport.width)+'px';
+      canvas.style.height=Math.ceil(viewport.height)+'px';
+      const ctx=canvas.getContext('2d');
+      ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);
+      container.appendChild(canvas);
+      await page.render({canvasContext:ctx,viewport}).promise;
+      const label=document.createElement('div');
+      label.className='pdf-status';label.textContent=`صفحه ${pageNum} از ${pdf.numPages}`;
+      container.appendChild(label);
+    }
+  }catch(err){
+    if(status)status.textContent='این PDF در مرورگر قابل نمایش نیست یا حجمش زیاد است. لطفاً نسخهٔ تصویری آن را بارگذاری کنید.';
+  }
+}
+function setStudentAnswer(index,answer){
+  const buttons=el('studentAnswerSheet').querySelectorAll('.answer-row')[index].querySelectorAll('.bubble');
+  buttons.forEach((b,i)=>{b.classList.toggle('student-selected',i+1===answer)});
+  buttons.forEach((b,i)=>{b.setAttribute('aria-pressed',String(i+1===answer))});
+}
+function getStudentAnswers(){
+  const rows=[...el('studentAnswerSheet').querySelectorAll('.answer-row')];
+  return rows.map(row=>{const i=[...row.querySelectorAll('.bubble')].findIndex(b=>b.classList.contains('student-selected'));return i<0?0:i+1});
+}
+function submitFileTest(){
+  const t=db.tests.find(x=>String(x.id)===String(activeAttemptTestId));if(!t||!activeStudent)return;
+  const availability=getTestAvailability(t);if(!availability.allowed){el('studentAttemptMessage').className='error';el('studentAttemptMessage').textContent='مهلت آزمون به پایان رسیده یا زمان آن معتبر نیست؛ پاسخ‌ها ثبت نشدند.';return}
+  const answers=getStudentAnswers(),key=t.answerKey||[],answered=answers.filter(a=>a>0).length;
+  if(!answered){el('studentAttemptMessage').className='error';el('studentAttemptMessage').textContent='هنوز هیچ پاسخی انتخاب نکرده‌ای.';return}
+  let correct=0,wrong=0,blank=0,weightedCorrect=0,weightedWrong=0,total=0;
+  const subjects=t.subjects||[...new Set(key.map(k=>k.subject).filter(Boolean))];
+  const subjectStats={};subjects.forEach(s=>subjectStats[s]={total:0,correct:0,wrong:0,blank:0,weightedCorrect:0,weightedWrong:0,weightTotal:0});
+  for(let i=0;i<answers.length;i++){
+    const item=key[i]||{},weight=Number(item.weight||1),right=Number(item.answer||0),student=Number(answers[i]||0),subject=item.subject||'';
+    total+=weight;
+    if(subject&&subjectStats[subject]){subjectStats[subject].total++;subjectStats[subject].weightTotal+=weight}
+    if(!student){blank++;if(subject&&subjectStats[subject])subjectStats[subject].blank++}
+    else if(right>0&&student===right){correct++;weightedCorrect+=weight;if(subject&&subjectStats[subject]){subjectStats[subject].correct++;subjectStats[subject].weightedCorrect+=weight}}
+    else {wrong++;weightedWrong+=weight;if(subject&&subjectStats[subject]){subjectStats[subject].wrong++;subjectStats[subject].weightedWrong+=weight}}
+  }
+  // Standard negative marking: every wrong answer cancels one third of a correct answer.
+  const netPoints=weightedCorrect-(weightedWrong/3);
+  const percent=total?Math.round((netPoints/total)*10000)/100:0;
+  subjects.forEach(s=>{const st=subjectStats[s];st.netPoints=st.weightedCorrect-st.weightedWrong/3;st.percent=st.weightTotal?Math.round(st.netPoints/st.weightTotal*10000)/100:0});
+  const report={testId:t.id,testTitle:t.title,username:activeStudent.username,answered,correct,wrong,blank,weightedCorrect,weightedWrong,netPoints,total,percent,date:new Date().toLocaleDateString('fa-IR'),subjects,subjectStats,questionCount:answers.length};
+  db.results=db.results||[];
+  // Keep only the latest submitted result per student for this test.
+  db.results=db.results.filter(x=>!(String(x.testId)===String(t.id)&&x.username===activeStudent.username));
+  db.results.push(report);
+  const classResults=db.results.filter(x=>String(x.testId)===String(t.id));
+  const scores=classResults.map(x=>Number(x.percent||0));
+  const mean=scores.reduce((a,b)=>a+b,0)/scores.length;
+  const variance=scores.reduce((a,b)=>a+Math.pow(b-mean,2),0)/scores.length;
+  const sd=Math.sqrt(variance);
+  classResults.forEach(x=>{
+    x.classAverage=Math.round(mean*100)/100;
+    x.tScore=sd>0?Math.round(500+100*(Number(x.percent)-mean)/sd):500;
+  });
+  classResults.sort((a,b)=>Number(b.percent)-Number(a.percent));
+  classResults.forEach((x,i)=>x.rank=i+1);
+  const refreshed=classResults.find(x=>x.username===activeStudent.username);
+  saveDB();
+  window.lastFarahooshReport=refreshed;
+  el('studentAttemptMessage').className='success';
+  el('studentAttemptMessage').textContent='آزمون ثبت و با نمرهٔ منفی تصحیح شد. نتایج آزمون در پایین نمایش داده شده است.';
+  renderExamResults(t.id, activeStudent.username);
+}
+function renderExamResults(testId,currentUsername){
+  const panel=el('examResultsPanel');if(!panel)return;
+  const t=db.tests.find(x=>String(x.id)===String(testId));
+  const rows=(db.results||[]).filter(x=>String(x.testId)===String(testId)).sort((a,b)=>Number(a.rank||999999)-Number(b.rank||999999));
+  if(!rows.length){panel.classList.remove('hidden');panel.innerHTML='<h3>نتایج آزمون</h3><p>هنوز نتیجه‌ای ثبت نشده است.</p>';return}
+  panel.classList.remove('hidden');
+  panel.innerHTML=`<h3>نتایج آزمون: ${esc(t?.title||'')}</h3><p class="score-note">درصد با نمرهٔ منفی محاسبه شده: هر پاسخ غلط به اندازهٔ یک‌سوم پاسخ صحیح از امتیاز کم می‌کند. نمرهٔ تراز با میانگین و انحراف معیار نتایج ثبت‌شده محاسبه می‌شود؛ با ثبت نتایج بیشتر، رتبه و تراز دوباره محاسبه می‌شوند.</p><div class="exam-results-scroll"><table class="exam-results-table"><thead><tr><th>رتبه</th><th>دانش‌آموز</th><th>صحیح</th><th>غلط</th><th>نزده</th><th>درصد با نمره منفی</th><th>نمره تراز</th></tr></thead><tbody>${rows.map(x=>`<tr class="${x.username===currentUsername?'current-student':''}"><td>${x.rank||'—'}</td><td>${esc(x.username)}</td><td>${x.correct}</td><td>${x.wrong}</td><td>${x.blank}</td><td>${Number(x.percent||0).toFixed(2)}٪</td><td>${x.tScore??500}</td></tr>`).join('')}</tbody></table></div><div class="actions"><button class="btn btn-secondary" onclick="window.print()">چاپ / ذخیره نتیجه‌ها PDF</button></div>`;
+}
+function submitManualTest(){
+  const t=db.tests.find(x=>String(x.id)===String(activeAttemptTestId));if(!t||!activeStudent)return;
+  const availability=getTestAvailability(t);if(!availability.allowed){el('studentAttemptMessage').className='error';el('studentAttemptMessage').textContent='مهلت آزمون به پایان رسیده یا زمان آن معتبر نیست؛ پاسخ‌ها ثبت نشدند.';return}
+  const count=t.questionData?.length||0;const answered=Array.from({length:count},(_,i)=>document.querySelector(`input[name="manualAnswer${i}"]:checked`)).filter(Boolean).length;
+  el('studentAttemptMessage').className='success';el('studentAttemptMessage').textContent=`آزمون ثبت شد. تعداد سؤال‌های پاسخ‌داده‌شده: ${answered} از ${count}. در این نوع آزمون پاسخنامهٔ نمره‌دهی تعریف نشده است.`;
+}
+function showLatestReport(){if(window.lastFarahooshReport)showReport(window.lastFarahooshReport)}
+function showReport(r){
+  const names=r.subjects||[],stats=r.subjectStats||{};
+  const row=(s)=>{const x=stats[s]||{percent:0,correct:0,wrong:0,blank:0,weightTotal:0,earned:0};return `<tr><td>${esc(s)}</td><td>${Number(x.percent||0).toFixed(2)}%</td><td>${x.correct}</td><td>${x.wrong}</td><td>${x.blank}</td><td>${r.rank||'—'}</td><td>${r.tScore??'—'}</td><td>${r.classAverage==null?'—':Number(r.classAverage).toFixed(2)+'%'}</td></tr>`};
+  const allCorrect=r.correct||0,allWrong=r.wrong||0,allBlank=r.blank||0;
+  const bars=names.map(s=>{const p=Number(stats[s]?.percent||0);return `<div class="bar-item" title="${esc(s)}: ${p}%"><strong>${p}%</strong><div class="bar-fill" style="height:${Math.max(2,p*1.35)}px"></div><span class="bar-label">${esc(s)}</span></div>`}).join('');
+  const classValues=(db.results||[]).filter(x=>String(x.testId)===String(r.testId)).map(x=>Number(x.percent||0));
+  const vals=classValues.slice(-10),w=620,h=190,pad=28;
+  let points=vals.map((v,i)=>`${pad+(vals.length<=1?0:i*(w-pad*2)/(vals.length-1))},${h-pad-v*(h-pad*2)/100}`).join(' ');
+  const lineChart=vals.length?`<svg class="line-chart" viewBox="0 0 ${w} ${h}" role="img" aria-label="نمودار درصد نتایج ثبت‌شدهٔ آزمون"><line x1="${pad}" y1="${h-pad}" x2="${w-pad}" y2="${h-pad}" stroke="#60749a"/><line x1="${pad}" y1="${pad}" x2="${pad}" y2="${h-pad}" stroke="#60749a"/><line x1="${pad}" y1="${h/2}" x2="${w-pad}" y2="${h/2}" stroke="#273c61" stroke-dasharray="4 4"/><polyline points="${points}" fill="none" stroke="#41d8ff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>${vals.map((v,i)=>`<circle cx="${pad+(vals.length<=1?0:i*(w-pad*2)/(vals.length-1))}" cy="${h-pad-v*(h-pad*2)/100}" r="4" fill="#a78bfa"/>`).join('')}</svg>`:`<div class="empty">پس از ثبت نتایج دانش‌آموزان دیگر، نمودار میانگین کلاس نمایش داده می‌شود؛ فعلاً دادهٔ کلاس موجود نیست.</div>`;
+  const table=`<div class="report-table-wrap"><table class="report-table"><thead><tr><th>کتاب / درس</th><th>درصد</th><th>صحیح</th><th>غلط</th><th>نزده</th><th>رتبه</th><th>نمره تراز</th><th>میانگین کلاس</th></tr></thead><tbody>${names.map(row).join('')}<tr><td>کل</td><td>${Number(r.percent||0).toFixed(2)}%</td><td>${allCorrect}</td><td>${allWrong}</td><td>${allBlank}</td><td>${r.rank||'—'}</td><td>${r.tScore??'—'}</td><td>${r.classAverage==null?'—':Number(r.classAverage).toFixed(2)+'%'}</td></tr></tbody></table></div>`;
+  const textReport=`کارنامه فراهوش\nدانش‌آموز: ${r.username}\nآزمون: ${r.testTitle}\nتاریخ: ${r.date}\nپاسخ‌داده‌شده: ${r.answered} از ${r.questionCount||300}\nصحیح: ${r.correct}\nغلط: ${r.wrong}\nنزده: ${r.blank}\nدرصد کل با نمره منفی: ${Number(r.percent||0).toFixed(2)}%`;
+  el('studentReportPanel').innerHTML=`<div class="answer-sheet-head"><h2>کارنامهٔ فراهوش</h2><div>${esc(r.testTitle)}</div><div>دانش‌آموز: ${esc(r.username)} · تاریخ: ${esc(r.date)}</div></div><div class="report-overall"><div class="stat">تعداد سؤال: ${r.questionCount||300}</div><div class="stat">صحیح: ${r.correct}</div><div class="stat">غلط: ${r.wrong}</div><div class="stat">نزده: ${r.blank}</div><div class="stat">درصد کل با نمره منفی: ${Number(r.percent||0).toFixed(2)}٪</div><div class="stat">نمره تراز: ${r.tScore??'—'}</div><div class="stat">رتبهٔ ثبت‌شده: ${r.rank||'—'}</div><div class="stat">میانگین کلاس: ${r.classAverage==null?'هنوز موجود نیست':r.classAverage+'٪'}</div></div><div class="report-layout"><section><div class="report-chart"><h3>درصد هر درس</h3><div class="bar-chart">${bars||'<span class="muted">برای این آزمون درسی تعریف نشده است.</span>'}</div></div><div class="report-chart"><h3>نمودار میانگین کلاس</h3>${lineChart}<p class="muted">نمودار بر اساس نتایج واقعی ثبت‌شده برای همین آزمون ساخته می‌شود؛ دادهٔ ساختگی اضافه نشده است.</p></div></section><section class="report-chart"><h3>جزئیات کارنامه</h3>${table}</section></div><div class="qr-wrap"><strong>QR کارنامه</strong><div id="reportQr" aria-label="کد QR کارنامه"></div><div class="muted">خلاصهٔ همین کارنامه در کد QR قرار می‌گیرد.</div></div><div class="actions no-print"><button class="btn btn-secondary" onclick="window.print()">چاپ / ذخیره PDF کارنامه</button><button class="btn btn-secondary" onclick="closeAttempt()">بازگشت به آزمون‌ها</button></div>`;
+  const qrTarget=el('reportQr');if(qrTarget){qrTarget.innerHTML='';if(window.QRCode){new QRCode(qrTarget,{text:textReport,width:180,height:180,colorDark:'#000000',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M})}else{qrTarget.textContent='برای ساخت QR به اینترنت نیاز است.';}}
+  el('studentReportPanel').classList.remove('hidden');el('studentReportPanel').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function closeAttempt(){el('studentAttemptPanel').classList.add('hidden');el('studentReportPanel').classList.add('hidden');activeAttemptTestId=null}
+function deleteTest(id){if(!confirm('این آزمون حذف شود؟'))return;db.tests=db.tests.filter(x=>String(x.id)!==String(id));saveDB();renderAll()}
+function deleteLesson(id){if(!confirm('این آموزش حذف شود؟'))return;db.lessons=db.lessons.filter(x=>String(x.id)!==String(id));saveDB();renderAll()}
+function empty(msg){return '<div class="empty">'+esc(msg)+'</div>'}
+function lessonCard(x,manager){let fs=(x.files||[]).map(f=>{let url=f.data;let tag=f.type.startsWith('image/')?`<img src="${url}" alt="${esc(f.name)}" style="max-width:100%;max-height:220px;border-radius:10px;margin-top:8px">`:f.type.startsWith('video/')?`<video controls src="${url}" style="width:100%;max-height:240px;margin-top:8px;border-radius:10px"></video>`:`<a class="btn btn-secondary" style="display:inline-block;margin-top:8px;text-decoration:none" href="${url}" target="_blank" rel="noopener">باز کردن PDF: ${esc(f.name)}</a>`;return `<div class="file-preview">${esc(f.name)} · ${(f.size/1024).toFixed(0)} KB</div>${tag}`}).join('');return `<article class="item"><h3>${esc(x.title)}</h3><div class="meta">ثبت‌شده در ${esc(x.created||'')}</div>${x.desc?`<p>${esc(x.desc)}</p>`:''}${fs}${manager?`<div class="actions"><button class="btn btn-danger" onclick="deleteLesson('${x.id}')">حذف آموزش</button></div>`:''}</article>`}
+function renderAll(){el('studentsList').innerHTML=db.students.length?db.students.map(s=>`<article class="item"><h3>${esc(s.username)}</h3><div class="meta">تاریخ ساخت: ${esc(s.created||'')}</div><p>رمز عبور: <strong>${esc(s.password)}</strong></p><div class="actions"><button class="btn btn-danger" onclick="deleteStudent('${s.id}')">حذف حساب</button></div></article>`).join(''):empty('هنوز دانش‌آموزی اضافه نشده است.');el('lessonsList').innerHTML=db.lessons.length?db.lessons.map(x=>lessonCard(x,true)).join(''):empty('هنوز آموزشی ثبت نشده است.');el('managerTestsList').innerHTML=db.tests.length?db.tests.map(x=>testCard(x,true)).join(''):empty('هنوز آزمونی ساخته نشده است.');el('studentLessonsList').innerHTML=db.lessons.length?db.lessons.map(x=>lessonCard(x,false)).join(''):empty('هنوز آموزشی منتشر نشده است.');el('studentTestsList').innerHTML=db.tests.length?db.tests.map(x=>testCard(x,false)).join(''):empty('هنوز آزمونی در دسترس نیست.');el('studentLessonCount').textContent='آموزش‌ها: '+db.lessons.length;el('studentTestCount').textContent='آزمون‌ها: '+db.tests.length}
+</script>
+</body>
+</html>
